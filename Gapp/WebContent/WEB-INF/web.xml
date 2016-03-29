@@ -10,5 +10,4 @@
         <servlet-name>Projet</servlet-name>
         <url-pattern>/Test</url-pattern>
     </servlet-mapping>
-    
 </web-app>
