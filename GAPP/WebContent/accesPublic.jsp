@@ -1,0 +1,12 @@
+<%@ page session="false" %>
+<%@ page pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Accès public</title>
+    </head>
+    <body>
+        <p>Bienvenue sur la page d'accès public.</p>
+    </body>
+</html>

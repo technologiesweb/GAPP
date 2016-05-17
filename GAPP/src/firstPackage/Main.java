@@ -1,0 +1,94 @@
+package firstPackage;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+	
+public class Main {
+	public static void main(String[] args) {
+		
+		executerTests();
+	}
+	
+	public static void executerTests() {
+		try {
+			System.out.println("Chargement du driver...");
+		    Class.forName( "com.mysql.jdbc.Driver" );
+		    System.out.println("Driver chargé !");
+		} catch ( ClassNotFoundException e) {
+			System.out.println("Erreur lors du chargement : le driver n'a pas été trouvé dans le classpath ! <br/>"
+	                + e.getMessage());
+		}
+	
+		/* Connexion à la base de données */
+		String url = "jdbc:mysql://localhost:3306/mydb";
+		String user = "root";
+		String pass = "GAPP";
+		Connection connection = null;
+	    Statement statement = null;
+	    ResultSet resultat = null;
+		try {
+			System.out.println("Connexion à la base de données...");
+			connection = DriverManager.getConnection(url, user, pass);
+			System.out.println("Connexion réussie !");
+			
+			 // Création de l'objet gérant les requêtes
+	        statement = connection.createStatement();
+	        System.out.println("Objet requête créé !");
+	        
+	        // 1
+	        // Exécution d'une requête de lecture 
+	        resultat = statement.executeQuery( "SELECT MP_Login, MP_Password FROM t_member_p;" );
+	        System.out.println("Requête \"SELECT MP_Login, MP_Password FROM t_member_p;\" effectuée !" );
+	        
+	        // Récupération des données du résultat de la requête de lecture */
+	        while (resultat.next() ) {
+	            String MP_Login = resultat.getString("MP_Login");
+	            String MP_Password = resultat.getString("MP_Password");
+	            // Formatage des données pour affichage dans la JSP finale. */
+	            System.out.println("Données retournées par la requête : MP_Login = " + MP_Login + ", MP_Password = " + MP_Password + ".");
+	        }
+	        
+	        // 2
+	        // Exécution d'une requête d'écriture avec renvoi de l'id auto-généré */
+	         //int statut = statement.executeUpdate( "INSERT INTO t_member_p (MP_Login, MP_Password) VALUES ('bsaminada', 'test');" , Statement.RETURN_GENERATED_KEYS);
+
+	        // Formatage pour affichage dans la JSP finale.
+	         //System.out.println( "Résultat de la requête d'insertion : " + statut + "." );
+
+	        // Récupération de l'id auto-généré par la requête d'insertion.
+	        //ResultSet resultat1 = statement.getGeneratedKeys();
+	        // Parcours du ResultSet et formatage pour affichage de la valeur qu'il contient dans la JSP finale. 
+	        /*while ( resultat1.next() ) {
+	        	System.out.println( "ID retourné lors de la requête d'insertion :" + resultat1.getInt( 1 ) );
+	        }*/
+	        
+	    } catch ( SQLException e ) {
+	    	System.out.println("Erreur lors de la connexion : <br/>"
+	                + e.getMessage() );
+	    } finally {
+	    	System.out.println("Fermeture de l'objet ResultSet." );
+	        if ( resultat != null ) {
+	            try {
+	                resultat.close();
+	            } catch ( SQLException ignore ) {
+	            }
+	        }
+	        System.out.println("Fermeture de l'objet Statement." );
+	        if ( statement != null ) {
+	            try {
+	                statement.close();
+	            } catch ( SQLException ignore ) {
+	            }
+	        }
+	        System.out.println("Fermeture de l'objet Connection." );
+	        if (connection != null ) {
+	            try {
+	            	connection.close();
+	            } catch (SQLException ignore ) {
+	            }
+	        }
+	    }
+	}
+}
