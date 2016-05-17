@@ -1,0 +1,40 @@
+@main(title = "Fiche") {
+<script type="text/javascript" src="calendarDateInput.js"></script>
+		<h1>Fiche Elève de [Nom] [Prénom]</h1>
+		<p>Remarques Générales</p>
+		<form>
+			<textarea rows="5" cols="50"></textarea><br>			
+			<input name ="Modifier" value="Modifier" type="submit"/>
+		</form>
+		<p>Grille de Compétences</p>
+		<form>
+			<table>
+				<thead>
+					<tr>
+						<th>Compétences</th>
+						<th>Loin</th>
+						<th>Proche</th>
+						<th>Acquis</th>
+						<th>Remarques</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Compétence 1</td>
+						<td><input type="radio"/></td>
+						<td><input type="radio"/></td>
+						<td><input type="radio"/></td>
+						<td><input type="text"/></td>
+					</tr>
+					<tr>
+						<td>Compétence 2</td>
+						<td><input type="radio"/></td>
+						<td><input type="radio"/></td>
+						<td><input type="radio"/></td>
+						<td><input type="text"/></td>
+					</tr>							
+				</tbody>
+			</table>
+			<input name ="Sauvegarder" value="Sauvegarder" type="submit"/>
+		</form>
+}

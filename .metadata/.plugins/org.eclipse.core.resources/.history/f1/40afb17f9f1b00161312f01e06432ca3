@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+  <link rel="stylesheet" href="header.css" >
+</head>
+
+<header>
+<div class="nav">
+    <div class="container">
+    	<ul class="pull-left">
+        	<li><a href="#">Baradi Saminada</a></li>
+        </ul>
+        <ul class="pull-right">
+        	<li>12/04/2016</li>
+          	<li>11:33</li>
+          	<li><a href="http://localhost:8087/Gapp/Deconnexion">Se déconnecter</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="jumbotron">
+	
+    <div class="container">
+    	<h1>GAPP-ISEP</h1>
+        <p>L'outil idéal pour les APPs :)</p>
+    </div>
+</div>
+</header>
+
+  <body>
+    
+    
+  </body>
+</html>

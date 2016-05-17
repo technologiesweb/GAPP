@@ -1,0 +1,52 @@
+package firstPackage;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+
+public class T_courses_tDaoImpl implements T_courses_tDao {
+    private DAOFactory daoFactory;
+
+    T_courses_tDaoImpl(DAOFactory daoFactory ) {
+        this.daoFactory = daoFactory;
+    }
+    
+    
+    /* Implémentation de la méthode trouver() définie dans l'interface UtilisateurDao */
+    @Override
+    public T_courses_t trouver(String email) throws DAOException {
+        return null;
+   }
+	    /* Implémentation de la méthode creer() définie dans l'interface UtilisateurDao */
+    @Override
+    public void creer(T_courses_t t_courses_t) throws IllegalArgumentException, DAOException {
+    }
+    
+    /*
+     * Initialise la requête préparée basée sur la connexion passée en argument,
+     * avec la requête SQL et les objets donnés.
+     */
+    public static PreparedStatement initialisationRequetePreparee( Connection connexion, String sql, boolean returnGeneratedKeys, Object... objets ) throws SQLException {
+        PreparedStatement preparedStatement = connexion.prepareStatement( sql, returnGeneratedKeys ? Statement.RETURN_GENERATED_KEYS : Statement.NO_GENERATED_KEYS );
+        for ( int i = 0; i < objets.length; i++ ) {
+            preparedStatement.setObject( i + 1, objets[i] );
+        }
+        return preparedStatement;
+    }
+    
+    /*
+     * Simple méthode utilitaire permettant de faire la correspondance (le
+     * mapping) entre une ligne issue de la table des utilisateurs (un
+     * ResultSet) et un bean Utilisateur.
+     */
+    private static T_courses_t map(ResultSet resultSet) throws SQLException {
+    	T_courses_t utilisateur = new T_courses_t();
+        utilisateur.setCT_id( resultSet.getInt("CT_id") );
+        utilisateur.setCT_name( resultSet.getString( "CT_name" ) );
+        utilisateur.setCT_description( resultSet.getString( "CT_description" ) );
+        return utilisateur;
+    }
+}

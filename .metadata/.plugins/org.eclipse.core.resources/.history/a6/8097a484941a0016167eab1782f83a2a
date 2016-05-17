@@ -1,0 +1,45 @@
+package mvc.controller;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import mvc.model.Member;
+
+@WebServlet("/Controller")
+public class Controller extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public Controller() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// Read a person’s information passed through the HTML form
+		String login = request.getParameter("login");
+		String password = request.getParameter("password");
+		
+		// Use these information to create an instance of the bean Person
+		Object member = new Member(login, password);
+		
+		// Add the created bean to the request
+		request.setAttribute("member", member);
+		
+		// Forward the request to the appropriate JSP page
+		if (password != "" && password.equals("couocou")) {
+			RequestDispatcher dispatcher;
+			dispatcher = getServletContext().getRequestDispatcher("/Mon_Profil.html");
+			dispatcher.include(request, response);
+		} else {
+			System.out.println("mauvais mot de pass !");
+		}
+	}
+}

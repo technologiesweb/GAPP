@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+
+    <servlet>
+        <servlet-name>Connexion</servlet-name>
+        <servlet-class>servlets.Connexion</servlet-class>
+    </servlet>
+	<servlet>
+		<servlet-name>Deconnexion</servlet-name>
+		<servlet-class>servlets.Deconnexion</servlet-class>
+	</servlet>
+
+    <servlet-mapping>
+        <servlet-name>Connexion</servlet-name>
+        <url-pattern>Gapp/connexion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>Deconnexion</servlet-name>
+		<url-pattern>/deconnexion</url-pattern>
+	</servlet-mapping>
+</web-app>

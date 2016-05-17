@@ -1,0 +1,10 @@
+package dao;
+
+import beans.T_member_p;
+
+public interface T_member_pDao {
+
+    void creer(T_member_p t_member_p) throws DAOException;
+
+    T_member_p trouver(String login) throws DAOException;
+}
