@@ -1,26 +1,17 @@
-<!DOCTYPE html>
-<html>
-
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>Fiche El√®ve</title>
-		<link rel="stylesheet" type="text/css" href="css.css"> 
-		<script type="text/javascript" src="calendarDateInput.js"></script>
-	</head>
-	
-	<body>
-		<h1>Fiche El√®ve de [Nom] [Pr√©nom]</h1>
-		<p>Remarques G√©n√©rales</p>
+@main(title = "Fiche") {
+<script type="text/javascript" src="calendarDateInput.js"></script>
+		<h1>Fiche ElËve de [Nom] [PrÈnom]</h1>
+		<p>Remarques GÈnÈrales</p>
 		<form>
 			<textarea rows="5" cols="50"></textarea><br>			
 			<input name ="Modifier" value="Modifier" type="submit"/>
 		</form>
-		<p>Grille de Comp√©tences</p>
+		<p>Grille de CompÈtences</p>
 		<form>
 			<table>
 				<thead>
 					<tr>
-						<th>Comp√©tences</th>
+						<th>CompÈtences</th>
 						<th>Loin</th>
 						<th>Proche</th>
 						<th>Acquis</th>
@@ -29,14 +20,14 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>Comp√©tence 1</td>
+						<td>CompÈtence 1</td>
 						<td><input type="radio"/></td>
 						<td><input type="radio"/></td>
 						<td><input type="radio"/></td>
 						<td><input type="text"/></td>
 					</tr>
 					<tr>
-						<td>Comp√©tence 2</td>
+						<td>CompÈtence 2</td>
 						<td><input type="radio"/></td>
 						<td><input type="radio"/></td>
 						<td><input type="radio"/></td>
@@ -46,5 +37,4 @@
 			</table>
 			<input name ="Sauvegarder" value="Sauvegarder" type="submit"/>
 		</form>
-	</body>
-</html>
+}
