@@ -1,17 +1,19 @@
-@main(title = "Fiche") {
+@(t_member_p: T_member_p, title: String)
+
+@main(t_member_p, title) {
 <script type="text/javascript" src="calendarDateInput.js"></script>
-		<h1>Fiche Elève de [Nom] [Prénom]</h1>
-		<p>Remarques Générales</p>
+		<h1>Fiche Elï¿½ve de [Nom] [Prï¿½nom]</h1>
+		<p>Remarques Gï¿½nï¿½rales</p>
 		<form>
 			<textarea rows="5" cols="50"></textarea><br>			
 			<input name ="Modifier" value="Modifier" type="submit"/>
 		</form>
-		<p>Grille de Compétences</p>
+		<p>Grille de Compï¿½tences</p>
 		<form>
 			<table>
 				<thead>
 					<tr>
-						<th>Compétences</th>
+						<th>Compï¿½tences</th>
 						<th>Loin</th>
 						<th>Proche</th>
 						<th>Acquis</th>
@@ -20,14 +22,14 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>Compétence 1</td>
+						<td>Compï¿½tence 1</td>
 						<td><input type="radio"/></td>
 						<td><input type="radio"/></td>
 						<td><input type="radio"/></td>
 						<td><input type="text"/></td>
 					</tr>
 					<tr>
-						<td>Compétence 2</td>
+						<td>Compï¿½tence 2</td>
 						<td><input type="radio"/></td>
 						<td><input type="radio"/></td>
 						<td><input type="radio"/></td>

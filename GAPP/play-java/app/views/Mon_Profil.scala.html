@@ -1,4 +1,6 @@
-@main(title = "Mon profil") {
+@(t_member_p: T_member_p, title: String)
+
+@main(t_member_p, title) {
 
 		<h1>Mon profil</h1>		
 		<form action="@routes.Recherche.recherche()">
@@ -15,7 +17,7 @@
 				<tr>
 					<td>
 						<p>Graphe</p>
-						<p>Durée des absences</p>
+						<p>DurÃ©e des absences</p>
 					</td>
 					<td>
 						<script>DateInput('orderdate', true, 'DD-MON-YYYY')</script>
@@ -29,4 +31,5 @@
 				</tr>						
 			</tbody>
 		</table>
+		
 }

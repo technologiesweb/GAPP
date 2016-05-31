@@ -3,7 +3,18 @@
 # ~~~~
 
 # Connexion
-GET     /                           controllers.Connexion.connex
+GET     /                           controllers.Connexion.login
+POST    /                           controllers.Connexion.authenticate
+GET     /logout                     controllers.Connexion.logout
+
+GET     /see/competences            controllers.Test.index
+
+GET     /sign                       controllers.Sign.signIn
+POST    /sign                       controllers.Sign.create
+
+#Competence
+GET     /ajout/competence           controllers.Competences.addCompetences
+POST    /ajout/competence           controllers.Competences.create
 
 # Deadline
 GET    /deadline					controllers.Deadline.deadline
