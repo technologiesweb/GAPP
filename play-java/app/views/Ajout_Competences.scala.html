@@ -34,20 +34,15 @@
 
     @helper.form(routes.Competences.create) {
 	<h1>Ajouter une compétence</h1>
-	
-	    <p>
-	        <label>Id : </label><input type="number" min="1" max="1000" name="id" value=@form("id").value>
-	    </p>
 	    <p>
 		    <label>Nom : </label><input type="text" name="name">
 	    </p>
 	    <p>
-		    <!--<select name="parentId">
+		    <select name="parentId">
 			    <option>Famille de compétences 1</option> 
 			    <option selected>Famille de compétences 2</option>
 			    <option>Famille de compétences 3</option>
-		    </select-->
-		    <label>ParentId : </label><input type="number" min="1" max="1000" name="parentId"/>
+		    </select>
 		</p>
 		<p>
 		    <textarea rows="4" cols="50" name="description">Description</textarea>

@@ -8,6 +8,7 @@ import static play.data.Form.*;
 import models.*;
 import views.html.*;
 
+@Security.Authenticated(Secured.class)
 public class Competences extends Controller {
     
     public Result addCompetences() {
@@ -17,14 +18,13 @@ public class Competences extends Controller {
     }
     
     public static class AddCompetence {
-        public int id;
         public String name;
         public int parentId;
         public String description;
         public int coeff;
         
         public String validate() {
-            if (T_competence_p.create(id, name, parentId, description, coeff) == null) {
+            if (T_competence_p.create(name, parentId, description, coeff) == null) {
                 return "Un champs n'est pas valide";
             }
             return null;

@@ -8,6 +8,7 @@ import static play.data.Form.*;
 import models.*;
 import views.html.*;
 
+@Security.Authenticated(Secured.class)
 public class Test extends Controller {
     
     public Result index() {

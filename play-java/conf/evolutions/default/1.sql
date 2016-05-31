@@ -11,12 +11,11 @@ create table project (
 ;
 
 create table t_competence_p (
-  cp_id                     integer auto_increment not null,
-  cp_name                   varchar(255),
+  cp_name                   varchar(255) not null,
   cp_parent_id              integer,
   cp_description            varchar(255),
   cp_coeff                  integer,
-  constraint pk_t_competence_p primary key (cp_id))
+  constraint pk_t_competence_p primary key (cp_name))
 ;
 
 create table t_courses_p (
