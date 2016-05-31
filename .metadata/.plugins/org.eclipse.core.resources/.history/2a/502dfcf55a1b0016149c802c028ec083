@@ -1,0 +1,70 @@
+package servlets;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import beans.T_member_p;
+import dao.T_member_pDao;
+import dao.DAOException;
+import dao.DAOFactory;
+
+public class SuppressionT_member_p extends HttpServlet {
+    public static final String CONF_DAO_FACTORY        = "daofactory";
+    public static final String PARAM_LOGIN_T_member_p  = "loginMember";
+    public static final String SESSION_T_members_p     = "members";
+
+    public static final String VUE = "/listeMembers";
+
+    private T_member_pDao t_member_pDao;
+
+    public void init() throws ServletException {
+        /* Récupération d'une instance de notre DAO Utilisateur */
+        this.t_member_pDao = ( (DAOFactory) getServletContext().getAttribute( CONF_DAO_FACTORY ) ).getT_member_pDao();
+    }
+
+    public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
+        /* Récupération du paramètre */
+        String loginMember = getValeurParametre(request, PARAM_LOGIN_T_member_p);
+
+        /* Récupération de la Map des clients enregistrés en session */
+        HttpSession session = request.getSession();
+        Map<Long, T_member_p> t_members_p = (HashMap<Long, T_member_p>) session.getAttribute( SESSION_T_members_p );
+
+        /* Si l'id du client et la Map des clients ne sont pas vides */
+        if (loginMember != null && t_members_p != null ) {
+            try {
+                /* Alors suppression du client de la BDD */
+            	t_member_pDao.supprimer( t_members_p.get(loginMember));
+                /* Puis suppression du client de la Map */
+            	t_members_p.remove(loginMember);
+            } catch ( DAOException e ) {
+                e.printStackTrace();
+            }
+            /* Et remplacement de l'ancienne Map en session par la nouvelle */
+            session.setAttribute(SESSION_T_members_p, t_members_p);
+        }
+
+        /* Redirection vers la fiche récapitulative */
+        response.sendRedirect( request.getContextPath() + VUE );
+    }
+
+    /*
+     * Méthode utilitaire qui retourne null si un paramètre est vide, et son
+     * contenu sinon.
+     */
+    private static String getValeurParametre( HttpServletRequest request, String nomChamp ) {
+        String valeur = request.getParameter( nomChamp );
+        if ( valeur == null || valeur.trim().length() == 0 ) {
+            return null;
+        } else {
+            return valeur;
+        }
+    }
+}

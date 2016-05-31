@@ -1,0 +1,5 @@
+package org.jasypt.commons;
+
+public class CommonUtils {
+
+}

@@ -1,0 +1,13 @@
+package firstPackage;
+
+public class T_courses_tDaoImpl implements UtilisateurDao {
+    /* Implémentation de la méthode trouver() définie dans l'interface UtilisateurDao */
+    @Override
+    public T_courses_t trouver(String email) throws DAOException {
+        return null;
+   }
+	    /* Implémentation de la méthode creer() définie dans l'interface UtilisateurDao */
+    @Override
+    public void creer(T_courses_t t_courses_t) throws IllegalArgumentException, DAOException {
+    }
+}

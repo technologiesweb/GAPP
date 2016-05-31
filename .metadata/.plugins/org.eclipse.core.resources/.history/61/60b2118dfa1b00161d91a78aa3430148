@@ -1,0 +1,12 @@
+@(message: String)
+
+@main("Welcome to Play") {
+
+<ul id="bars"></ul>
+
+<form action="@routes.HomeController.addBar()" method="post">
+	<input name="name">
+	<input type="submit">
+</form>
+
+}

@@ -1,0 +1,5 @@
+package org.jasypt.util.password;
+
+public class PasswordEncryptor {
+
+}

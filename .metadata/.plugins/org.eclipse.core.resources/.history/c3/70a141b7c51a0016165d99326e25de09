@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 		<title>Accueil - Connexion</title>
+	</head>
+	<body>
+		<header>
+		
+		</header>
+		<div>
+			<h3>Connexion</h3>
+			<form method="post" action="/Gapp/Connexion">
+				<p><label>Login : </label><input type="text" name="login"/></p>
+				<p><label>Mot de passe : </label><input type="text" name="password"/></p>
+				<p><input type="submit" value="Se connecter"/></p>
+			</form>
+		</div>
+
+
+ 	</body>
+</html>

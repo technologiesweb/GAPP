@@ -1,0 +1,133 @@
+package forms;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.jasypt.util.password.ConfigurablePasswordEncryptor;
+
+import beans.T_member_p;
+import dao.DAOException;
+import dao.T_member_pDao;
+
+public final class ConnexionForm {
+    private static final String CHAMP_LOGIN      = "login";
+    private static final String CHAMP_PASSWORD   = "password";
+
+    private static final String ALGO_CHIFFREMENT = "SHA-256";
+
+    private String              resultat;
+    private Map<String, String> erreurs          = new HashMap<String, String>();
+    private T_member_pDao      t_member_pDao;
+
+    public ConnexionForm(T_member_pDao t_member_pDao) {
+        this.t_member_pDao = t_member_pDao;
+    }
+
+    public Map<String, String> getErreurs() {
+        return erreurs;
+    }
+
+    public String getResultat() {
+        return resultat;
+    }
+
+    public T_member_p connecterT_member_p(HttpServletRequest request) {
+        String login = getValeurChamp(request, CHAMP_LOGIN);
+        String password = getValeurChamp(request, CHAMP_PASSWORD);
+
+        T_member_p t_member_p = new T_member_p();
+        try {
+            traiterLogin(login, t_member_p);
+            traiterPassword(login, password, t_member_p);
+
+            if (erreurs.isEmpty()) {
+                t_member_pDao.trouver(login);
+                resultat = "SuccËs de la connexion.";
+            } else {
+                resultat = "Echec de la connexion.";
+            }
+        } catch ( DAOException e ) {
+            resultat = "Echec de la connexion : une erreur imprÈvue est survenue, merci de rÈessayer dans quelques instants.";
+            e.printStackTrace();
+        }
+
+        return t_member_p;
+    }
+    
+    /*
+     * Appel √  la validation de l'adresse email re√ßue et initialisation de la
+     * propri√©t√© email du bean
+     */
+    private void traiterLogin(String login, T_member_p t_member_p) {
+        try {
+            validationLogin(login);
+        } catch ( FormValidationException e ) {
+            setErreur(CHAMP_LOGIN, e.getMessage());
+        }
+    }
+
+
+    /*
+     * Appel √  la validation des mots de passe re√ßus, chiffrement du mot de
+     * passe et initialisation de la propri√©t√© motDePasse du bean
+     */
+    private void traiterPassword(String login, String password, T_member_p t_member_p) {
+        try {
+            validationPassword(login, password, t_member_p);
+        } catch (FormValidationException e) {
+            setErreur( CHAMP_PASSWORD, e.getMessage() );
+        }
+
+    }
+
+    /* Validation de l'adresse email */
+    private void validationLogin(String login) throws FormValidationException {
+        if (login != null ) {
+        	System.out.println(t_member_pDao.trouver(login));
+            if (t_member_pDao.trouver(login) == null) {
+                throw new FormValidationException( "Ce login est invalide" );
+            }
+        } else {
+            throw new FormValidationException( "Merci de saisir un login." );
+        }
+    }
+    
+    private void validationPassword(String login, String password, T_member_p t_member_p) throws FormValidationException {
+        // PrÈparation de la vÈrification du mot de passe
+        ConfigurablePasswordEncryptor passwordEncryptor = new ConfigurablePasswordEncryptor();
+        passwordEncryptor.setAlgorithm( ALGO_CHIFFREMENT );
+        passwordEncryptor.setPlainDigest( false );
+         
+        // RÈcupÈration dans la base du membre correspondant au mail saisi
+        if (password != null) {
+        t_member_p = t_member_pDao.trouver(login);
+        	if (!(t_member_p != null && passwordEncryptor.checkPassword(password, t_member_p.getMP_Password()))) {
+        		throw new FormValidationException( "Ce mot de passe est invalide" );
+        	}
+        } else {
+        	throw new FormValidationException( "Merci de saisir un mot de passe." );
+        }
+    }
+
+    /*
+     * Ajoute un message correspondant au champ sp√©cifi√© √  la map des erreurs.
+     */
+    private void setErreur( String champ, String message ) {
+        erreurs.put( champ, message );
+    }
+
+    /*
+     * MÈthode utilitaire qui retourne null si un champ est vide, et son contenu
+     * sinon.
+     */
+    private static String getValeurChamp( HttpServletRequest request, String nomChamp ) {
+        String valeur = request.getParameter( nomChamp );
+        if ( valeur == null || valeur.trim().length() == 0 ) {
+            return null;
+        } else {
+            return valeur;
+        }
+    }
+}

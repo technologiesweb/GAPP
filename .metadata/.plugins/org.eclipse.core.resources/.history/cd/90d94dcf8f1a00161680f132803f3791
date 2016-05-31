@@ -1,0 +1,43 @@
+package servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/CheckLoginAndPassword")
+public class CheckLoginAndPassword extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    public CheckLoginAndPassword() {
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//Read form fields
+		String login = request.getParameter("login");
+		String password = request.getParameter("password");
+		
+		// Set the response MIME type
+	 	 response.setContentType("text/html");
+	 	   
+	 	// Get a reference to a text-output stream 
+	 	 PrintWriter out = response.getWriter();
+	 	 
+			if (login.equals("tbeclin") && password.equals("test")){
+				out.println("1");
+	        } else {
+	        	out.println("0");
+	        }
+	 	 
+	 	 // Close the output stream
+	 	 out.close();
+	}
+	
+}

@@ -1,0 +1,11 @@
+<%@ page pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Accès restreint</title>
+    </head>
+    <body>
+        <p>Vous êtes connecté(e) avec l'adresse ${sessionScope.sessionT_member_p.login}, vous avez bien accès à l'espace restreint.</p>
+    </body>
+</html>
