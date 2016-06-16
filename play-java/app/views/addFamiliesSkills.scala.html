@@ -1,0 +1,37 @@
+@(title: String, status: Integer, name: String, form: Form[SkillsMatrixController.AddFamSkills])
+
+@main(title, status, name) {
+
+    @helper.form(routes.SkillsMatrixController.createFamilySkills) {
+	    <p>
+		    <label>Nom : </label><input type="text" name="name">
+	    </p>
+	    
+	    <p>
+		    <label>Coefficient : </label><input type="number" min="1" max="25" name="coeff"/>
+		</p>
+		
+		<p>
+		    <textarea rows="4" cols="50" name="description">Description</textarea>
+		</p>
+		
+		<input type="submit" value="Sauvegarder">
+
+
+    }
+    
+    @if(form.hasGlobalErrors) {
+            <p class="error">
+                @form.globalError.message
+            </p>
+    }
+        
+    @if(flash.contains("success")) {  // HERE
+        <p class="success">
+            @flash.get("success")
+        </p>
+    }
+    
+}
+
+

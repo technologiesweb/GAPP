@@ -1,0 +1,50 @@
+@(title: String, status: Integer, name: String, form: Form[CourseController.AddCourse], t_course_t: List[T_course_t], t_group_t: List[T_group_t])
+
+@main(title, status, name) {
+
+@helper.form(routes.CourseController.create) {
+	<h3>Deadlines</h3>
+	<p>
+	<label>Type de cours : </label>
+	    <select name="type">
+    @t_course_t.map { t_course_t =>
+    <option value=@t_course_t.CT_id>@t_course_t.CT_name</option> 
+    }
+		</select>
+	</p>
+	<p>
+	    <label>Nom : </label> <input type="text" name="name"/>
+	</p>
+	<p>
+	    <label>Description : </label> <input type="text" name="description"/>
+	</p>
+	<p>
+	    <label>Date : </label> <input type="date" name="ending_date">
+	</p>
+	<p>
+	    <select name="group">
+		    @t_group_t.map { t_group_t =>
+            <option value=@t_group_t.GT_id>@t_group_t.GT_name</option> 
+        }
+        </select>
+    </p>
+	<p>
+	<button type="submit">Enregistrer</button>
+	</p>
+	<p>
+	}
+        @if(form.hasGlobalErrors) {
+            <p class="error">
+                @form.globalError.message
+            </p>
+        }
+        
+        @if(flash.contains("success")) { 
+            <p class="success">
+                @flash.get("success")
+            </p>
+        }
+
+}
+
+

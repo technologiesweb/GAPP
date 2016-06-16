@@ -1,0 +1,41 @@
+@(name: String, title: String)
+
+
+<script type="text/javascript" src="calendarDateInput.js"></script>
+		<h1>Fiche El�ve de [Nom] [Pr�nom]</h1>
+		<p>Remarques G�n�rales</p>
+		<form>
+			<textarea rows="5" cols="50"></textarea><br>			
+			<input name ="Modifier" value="Modifier" type="submit"/>
+		</form>
+		<p>Grille de Comp�tences</p>
+		<form>
+			<table>
+				<thead>
+					<tr>
+						<th>Comp�tences</th>
+						<th>Loin</th>
+						<th>Proche</th>
+						<th>Acquis</th>
+						<th>Remarques</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Comp�tence 1</td>
+						<td><input type="radio"/></td>
+						<td><input type="radio"/></td>
+						<td><input type="radio"/></td>
+						<td><input type="text"/></td>
+					</tr>
+					<tr>
+						<td>Comp�tence 2</td>
+						<td><input type="radio"/></td>
+						<td><input type="radio"/></td>
+						<td><input type="radio"/></td>
+						<td><input type="text"/></td>
+					</tr>							
+				</tbody>
+			</table>
+			<input name ="Sauvegarder" value="Sauvegarder" type="submit"/>
+		</form>

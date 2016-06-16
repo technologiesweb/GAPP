@@ -1,0 +1,218 @@
+@(title: String, status: Integer, name: String)(content: Html)
+
+
+        
+        <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Web App</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="@routes.Assets.versioned("assets/bootstrap/css/bootstrap.min.css")" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="@routes.Assets.versioned("assets/css/sb-admin.css")" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="@routes.Assets.versioned("assets/css/plugins/morris.css")" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="@routes.Assets.versioned("assets/font-awesome/css/font-awesome.min.css")" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="@routes.Assets.versioned("assets/ico/favicon.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="@routes.Assets.versioned("assets/ico/apple-touch-icon-144-precomposed.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="@routes.Assets.versioned("assets/ico/apple-touch-icon-114-precomposed.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@routes.Assets.versioned("assets/ico/apple-touch-icon-72-precomposed.png")">
+    <link rel="apple-touch-icon-precomposed" href="@routes.Assets.versioned("assets/ico/apple-touch-icon-57-precomposed.png")">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="mon_profil.html">Web APP</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> @name <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="@routes.ConnectionController.logout()"><i class="fa fa-fw fa-power-off"></i>Déconnection</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            
+            
+            
+            
+            
+            
+
+@if(status == 1) {
+<!--Responsable APP-->
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Grille de compétences <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="#l"><i class="fa fa-fw fa-bar-chart-o"></i> Voir la grille</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-gear"></i> Modifier la grille</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="@routes.SearchController.search()"><i class="fa fa-search"></i> Rechercher</a>
+                    </li>
+                    <li>
+                        <a href="@routes.CourseController.addCourse()"><i class="fa fa-clock-o"></i> Ajouter des deadlines</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-wrench"></i> Attribuer les rôles</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-table"></i> Attribuer les groupes</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+
+} else {
+    @if(status == 2) {
+    <!--Tuteur-->
+     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <a href="@routes.SearchController.searchByName()"><i class="fa fa-search"></i> Rechercher</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        
+    }else {
+        @if(status == 3) {
+        <!--Elève-->
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="@routes.Profil.profil(name)"><i class="fa fa-fw fa-dashboard"></i> Mon Profil</a>
+                    </li>
+                    <li class="active">
+                        <a href="@routes.SkillsMatrixController.seeSkillsMatrix()"><i class="fa fa-fw fa-bar-chart-o"></i> Grille de compétences</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-table"></i> Mon Groupe</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+
+        
+        } else {
+        <!--Administration-->
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="@routes.SearchController.searchByName()"><i class="fa fa-search"></i> Rechercher</a>
+                    </li>
+                    <li class="active">
+                        <a href="@routes.NoteController.exportNotes()"><i class="fa fa-fw fa-desktop"></i> Exporter les notes</a>
+                    </li>
+                </ul>
+            </div>
+        <!-- /.navbar-collapse -->
+        }
+    }
+}
+
+
+        </nav>
+        
+<div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            @title
+                        </h1>
+                    </div>
+                </div>
+                <!-- /.row -->
+                
+                @content
+                
+                
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="@routes.Assets.versioned("assets/js/jquery.js")"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="@routes.Assets.versioned("assets/js/bootstrap.min.js")"></script>
+    
+    <!-- Morris Charts JavaScript -->
+    <script src="@routes.Assets.versioned("assets/js/plugins/morris/raphael.min.js")"></script>
+    <script src="@routes.Assets.versioned("assets/js/plugins/morris/morris.min.js")"></script>
+    <script src="@routes.Assets.versioned("assets/js/plugins/morris/morris-data.js")"></script>
+
+    <!-- Flot Charts JavaScript -->
+    <!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
+    <script src="@routes.Assets.versioned("assets/js/plugins/flot/jquery.flot.js")"></script>
+    <script src="@routes.Assets.versioned("assets/js/plugins/flot/jquery.flot.tooltip.min.js")"></script>
+    <script src="@routes.Assets.versioned("assets/js/plugins/flot/jquery.flot.resize.js")"></script>
+    <script src="@routes.Assets.versioned("assets/js/plugins/flot/jquery.flot.pie.js")"></script>
+    <script src="@routes.Assets.versioned("assets/js/plugins/flot/flot-data.js")"></script>
+
+</body>
+
+</html>
+
+
+
+                
+

@@ -1,0 +1,68 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Connexion
+GET     /                           controllers.ConnectionController.login
+POST    /                           controllers.ConnectionController.authenticate
+GET     /logout                     controllers.ConnectionController.logout
+
+GET     /sign                       controllers.Sign.signIn
+POST    /sign                       controllers.Sign.create
+
+# Compétences
+GET     /see/familiesSkills          controllers.SkillsMatrixController.seeFamiliesSkills
+GET     /add/familySkills            controllers.SkillsMatrixController.addFamilySkills
+POST    /add/familySkills            controllers.SkillsMatrixController.createFamilySkills
+GET     /edit/familySkills/:id       controllers.SkillsMatrixController.editFamilySkills(id: Integer)
+POST    /edit/familySkills/:id       controllers.SkillsMatrixController.updateFamilySkills(id: Integer)
+GET     /delete/familySkills/:id     controllers.SkillsMatrixController.deleteFamilySkills(id: Integer)
+
+GET     /add/skill/:id              controllers.SkillsMatrixController.addSkill(id: Integer)
+POST    /add/skill/:id              controllers.SkillsMatrixController.createSkill(id: Integer)
+GET     /edit/skill/:id             controllers.SkillsMatrixController.editSkill(id: Integer)
+POST    /edit/skill/:id             controllers.SkillsMatrixController.updateSkill(id: Integer)
+GET     /delete/skill/:id           controllers.SkillsMatrixController.deleteSkill(id: Integer)
+
+GET     /see/skillsMatrix           controllers.SkillsMatrixController.seeSkillsMatrix
+GET     /update/skillsMatrix        controllers.SkillsMatrixController.updateSkillMatrix
+POST    /update/skillsMatrix        controllers.SkillsMatrixController.modifySkillsMatrix
+
+#GET     /upadte/familySkillsLevel/:id   controllers.SkillsMatrixController.editFamilySkillsLevel(id: Integer)
+
+#Recherche
+GET     /search                  controllers.SearchController.search
+POST    /search                  controllers.SearchController.redirectPage
+GET     /searchByName            controllers.SearchController.searchByName
+POST    /searchByName            controllers.SearchController.redirectPage2
+
+
+#Note
+GET     /add/note                   controllers.NoteController.addNote
+POST    /add/note                   controllers.NoteController.create
+GET     /see/notes                  controllers.NoteController.seeNotes
+GET     /export/notes               controllers.NoteController.exportNotes
+
+#Deadlines
+GET     /add/course                 controllers.CourseController.addCourse
+POST    /add/course                 controllers.CourseController.create
+GET     /see/courses                controllers.CourseController.seeCourses
+
+# Profil
+GET    /mon/profil/:name    		controllers.Profil.profil(name: String)
+
+
+#Fiche
+GET    /fiche						controllers.Fiche.fiches
+
+
+
+
+
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

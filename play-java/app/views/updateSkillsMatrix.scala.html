@@ -1,0 +1,103 @@
+@(title: String, status: Integer, name: String, form: Form[SkillsMatrixController.UpdateSkillsMatrix], t_competence_t: List[T_competence_t], t_competence_p: List[T_competence_p], t_competence_l: List[T_competence_l], skillsInFamily: List[Boolean])
+
+@main(title, status, name) {
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Compétences</th>
+                            <th>Très loin</th>
+                            <th>Loin</th>
+                            <th>Proche</th>
+                            <th>Acquis</th>
+                            <th>Au-delà</th>
+                            <th>Remarques</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @t_competence_t.map { t_competence_t =>
+                            <tr>
+                                <td>@t_competence_t.CT_name</td>
+                                    
+                                    @defining(skillsInFamily.get(t_competence_t.CT_id-1)) { b =>
+
+                                <td>
+                                        @if(!b) {
+                                            <input type="radio" name="skill" id="optionsRadios1" value="1">
+                                            <input type="hidden" name="level" value="1">
+                                        }
+                                </td>
+                                <td>
+                                        @if(!b) {
+                                            <input type="radio" name="skill" id="optionsRadios2" value="2">
+                                            <input type="hidden" name="level" value="2">
+                                        }
+                                    
+                                </td>
+                                <td>
+                                        @if(!b) {
+                                            <input type="radio" name="skill" id="optionsRadios3" value="3">
+                                            <input type="hidden" name="level" value="3">
+                                        }
+                                    
+                                </td>
+                                <td>
+                                        @if(!b) {
+                                            <input type="radio" name="skill" id="optionsRadios4" value="4">
+                                            <input type="hidden" name="level" value="4">
+                                        }
+                                    
+                                </td>
+                                <td>
+                                        @if(!b) {
+                                            <input type="radio" name="skill" id="optionsRadios5" value="5">
+                                            <input type="hidden" name="level" value="5">
+                                        }
+                                    
+                                </td>
+                                <td>
+
+                                </td>
+                               
+                                
+                                 }
+                                 
+                            </tr>
+                            @t_competence_p.map { t_competence_p => 
+                                @if(t_competence_t.CT_id == t_competence_p.CP_type) {
+                                    <tr>
+                                        <td class="text-right">@t_competence_p.CP_name</td>
+                                        <td><input type="radio" name="skill@t_competence_p.CP_id" id="optionsRadios1" value="1"></td>
+                                        <td><input type="radio" name="skill@t_competence_p.CP_id" id="optionsRadios1" value="2"></td>
+                                        <td><input type="radio" name="skill@t_competence_p.CP_id" id="optionsRadios1" value="3"></td>
+                                        <td><input type="radio" name="skill@t_competence_p.CP_id" id="optionsRadios1" value="4"></td>
+                                        <td><input type="radio" name="skill@t_competence_p.CP_id" id="optionsRadios1" value="5"></td>
+                                        <td>
+
+                                        </td>
+                                       
+                                    </tr>
+                                }
+                            }
+                        }
+                    </tbody>
+                </table>
+                <div class="text-right">
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+}
+
+           
+
+	
+	

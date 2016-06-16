@@ -1,0 +1,36 @@
+@(name: String, title: String)
+
+
+
+		<h1>Mon profil</h1>		
+		<form action="@routes.SearchController.search()">
+		<input type="submit" value="Faire une Recherche"/></form>
+		<table>
+			<thead>
+				<tr>
+					<th>Absences</th>
+					<th>Cours</th>
+					<th>Tuteur</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<p>Graphe</p>
+						<p>Durée des absences</p>
+					</td>
+					<td>
+						<script>DateInput('orderdate', true, 'DD-MON-YYYY')</script>
+						<input type="button" onClick="alert(this.form.orderdate.value)" value="Show date value passed">
+					</td>
+					<td>
+						<p>[Nom du tuteur]</p>
+						<p>[Adresse email du tuteur]</p>
+						<p>Remarques tuteur : </p>
+					</td>
+				</tr>						
+			</tbody>
+		</table>
+		<h3>@name</h3>
+		
+

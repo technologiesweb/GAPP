@@ -1,0 +1,42 @@
+@(title: String, status: Integer, name: String, form: Form[SkillsMatrixController.UpdateFamilySkills], t_competence_t: T_competence_t)
+
+@main(title, status, name) {
+
+
+    @helper.form(routes.SkillsMatrixController.updateFamilySkills(t_competence_t.CT_id)) {
+
+	
+	
+	    <p>
+		    <label>Nom : </label><input type="text" name="name" value="@t_competence_t.CT_name">
+	    </p>
+	    
+	    <p>
+		    <label>Coefficient : </label><input type="number" min="1" max="25" name="coeff" value="@t_competence_t.CT_coeff"/>
+		</p>
+		
+		<p>
+		    <textarea rows="4" cols="50" name="description">@t_competence_t.CT_description</textarea>
+		</p>
+		<input type="hidden" name="id" value=@t_competence_t.CT_id>
+		
+		<input type="submit" value="Sauvegarder">
+
+
+    }
+    
+    @if(form.hasGlobalErrors) {
+            <p class="error">
+                @form.globalError.message
+            </p>
+    }
+        
+    @if(flash.contains("success")) {  // HERE
+        <p class="success">
+            @flash.get("success")
+        </p>
+    }
+    
+}
+
+

@@ -1,0 +1,34 @@
+@(title: String, status: Integer, name: String, t_course_p: List[T_course_p], t_course_t: List[T_course_t], t_group_t: List[T_group_t], dates: List[String])
+
+@main(title, status, name) {
+
+
+
+    <article>
+    @t_course_p.map { t_course_p =>
+    
+    @t_course_t.map { t_course_t =>
+        @if(t_course_p.CP_type == t_course_t.CT_id) {
+            <h3>@t_course_t.CT_name</h3>
+        }
+    }
+    <h3>@t_course_p.CP_name</h3>
+    <h3>@t_course_p.CP_description</h3>
+    <h3>@dates.get(t_course_p.CP_id-1)</h3>
+    
+    @t_group_t.map { t_group_t =>
+        @if(t_group_t.GT_id == t_course_p.CP_id_group) {
+            <h3>@t_group_t.GT_name</h3>
+        }
+    }
+    -------------------------------------------
+
+    }
+    
+
+                  
+    </article>
+    
+}
+
+

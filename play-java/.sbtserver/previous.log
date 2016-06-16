@@ -1,0 +1,414 @@
+New log file opened at Wed Jun 15 16:26:19 CEST 2016 by 5556@pc-Asus
+jvm 5556@pc-Asus
+jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.77-b03
+jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
+jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
+Starting event engine
+Starting sbt command engine
+Waiting for sbt command engine
+Command engine arguments=List()
+Command engine baseDirectory=C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java
+Command engine initial remaining commands List(--initialize, onFailure load-failed, boot, server-send-ready-for-request, server-handle-next-server-request)
+> --initialize
+> initialize
+> onFailure load-failed
+> boot
+> reload
+[Loading] Scanning directory C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\project
+[Loading] Found non-root projects 
+[Loading] Done in C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\project, returning: ()
+deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))))
+  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.JUnitXmlReportPlugin)
+sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin) not found List(sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin) not found List(sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin) not found List(sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin) not found List()
+  :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+[Loading] Done in C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\project, returning: (play-java-build)
+Loading project definition from C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\project
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@4a1145f8, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	
+[Loading] Scanning directory C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java
+[Loading] Found root project root w/ remaining 
+deducing auto plugins based on known facts Set(Atom(play.sbt.PlayJava), Atom(play.ebean.sbt.PlayEbean), Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(play.sbt.Play),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.routes.RoutesCompiler))), Clause(Atom(play.sbt.Play),Set(Atom(play.twirl.sbt.SbtTwirl))), Clause(Atom(play.sbt.Play),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(play.sbt.PlayAkkaHttpServer),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayJava),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayLayoutPlugin),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayLogback),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayNettyServer),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayScala),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.routes.RoutesCompiler),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.twirl.sbt.SbtTwirl),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.AkkaAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.docker.DockerPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.jar.ClasspathJarPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.jar.LauncherJarPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.debian.DebianDeployPlugin),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.debian.DebianPlugin),Set(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin))), Clause(Atom(com.typesafe.sbt.packager.debian.JDebPackaging),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.docker.DockerPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerDeployPlugin),Set(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.jar.LauncherJarPlugin))), Clause(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.rpm.RpmDeployPlugin),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin))), Clause(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin),Set(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin))), Clause(Atom(com.typesafe.sbt.packager.universal.UniversalDeployPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin),Set(Atom(com.typesafe.sbt.SbtNativePackager))), Clause(Atom(com.typesafe.sbt.packager.windows.WindowsDeployPlugin),Set(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin))), Clause(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(sbt.plugins.BackgroundRunPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.less.SbtLess),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.jshint.SbtJSHint),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.rjs.SbtRjs),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.digest.SbtDigest),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.mocha.SbtMocha),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(org.irundaia.sbt.sass.SbtSassify),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.play.sbt.enhancer.PlayEnhancer),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.ebean.sbt.PlayEbean),Set(Atom(com.typesafe.play.sbt.enhancer.PlayEnhancer))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(And(Set(Atom(sbt.plugins.BackgroundRunPlugin), Atom(play.sbt.Play), Atom(sbt.plugins.SerializersPlugin))),Set(Atom(play.sbt.forkrun.PlayForkRun))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.PlayLayoutPlugin))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.PlayLogback))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.PlayNettyServer))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.InteractionServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SendEventServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.less.SbtLess))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jshint.SbtJSHint))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.rjs.SbtRjs))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.digest.SbtDigest))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.mocha.SbtMocha))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(org.irundaia.sbt.sass.SbtSassify))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(com.typesafe.play.sbt.enhancer.PlayEnhancer)))))
+  :: deduced result: Matched(sbt.plugins.CorePlugin,play.ebean.sbt.PlayEbean,play.sbt.PlayJava,com.typesafe.play.sbt.enhancer.PlayEnhancer,sbt.plugins.InteractionServicePlugin,sbt.plugins.SendEventServicePlugin,play.sbt.Play,sbt.plugins.SerializersPlugin,sbt.plugins.IvyPlugin,com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging,play.twirl.sbt.SbtTwirl,sbt.plugins.JvmPlugin,play.sbt.PlayNettyServer,play.sbt.PlayLayoutPlugin,play.sbt.routes.RoutesCompiler,play.sbt.PlayLogback,com.typesafe.sbt.jse.SbtJsTask,com.typesafe.sbt.jshint.SbtJSHint,com.typesafe.sbt.packager.archetypes.JavaAppPackaging,sbt.plugins.JUnitXmlReportPlugin,com.typesafe.sbt.mocha.SbtMocha,com.typesafe.sbt.less.SbtLess,com.typesafe.sbt.rjs.SbtRjs,com.typesafe.sbt.jse.SbtJsEngine,com.typesafe.sbt.coffeescript.SbtCoffeeScript,sbt.plugins.BackgroundRunPlugin,com.typesafe.sbt.packager.rpm.RpmPlugin,com.typesafe.sbt.packager.windows.WindowsPlugin,com.typesafe.sbt.web.SbtWeb,com.typesafe.sbt.packager.docker.DockerPlugin,play.sbt.forkrun.PlayForkRun,com.typesafe.sbt.packager.debian.DebianPlugin,org.irundaia.sbt.sass.SbtSassify,com.typesafe.sbt.digest.SbtDigest,com.typesafe.sbt.packager.universal.UniversalPlugin,com.typesafe.sbt.packager.linux.LinuxPlugin,com.typesafe.sbt.SbtNativePackager)
+sorting: ns: List(sbt.plugins.CorePlugin, play.ebean.sbt.PlayEbean, play.sbt.PlayJava, com.typesafe.play.sbt.enhancer.PlayEnhancer, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, play.sbt.Play, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, play.twirl.sbt.SbtTwirl, sbt.plugins.JvmPlugin, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.routes.RoutesCompiler, play.sbt.PlayLogback, com.typesafe.sbt.jse.SbtJsTask, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.docker.DockerPlugin, play.sbt.forkrun.PlayForkRun, com.typesafe.sbt.packager.debian.DebianPlugin, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.universal.UniversalPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, com.typesafe.sbt.SbtNativePackager)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager) not found List(play.ebean.sbt.PlayEbean, play.sbt.PlayJava, com.typesafe.play.sbt.enhancer.PlayEnhancer, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, play.sbt.Play, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, play.twirl.sbt.SbtTwirl, sbt.plugins.JvmPlugin, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.routes.RoutesCompiler, play.sbt.PlayLogback, com.typesafe.sbt.jse.SbtJsTask, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.docker.DockerPlugin, play.sbt.forkrun.PlayForkRun, com.typesafe.sbt.packager.debian.DebianPlugin, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.universal.UniversalPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin) not found List(play.ebean.sbt.PlayEbean, play.sbt.PlayJava, com.typesafe.play.sbt.enhancer.PlayEnhancer, play.sbt.Play, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, play.twirl.sbt.SbtTwirl, sbt.plugins.JvmPlugin, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.routes.RoutesCompiler, play.sbt.PlayLogback, com.typesafe.sbt.jse.SbtJsTask, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.docker.DockerPlugin, play.sbt.forkrun.PlayForkRun, com.typesafe.sbt.packager.debian.DebianPlugin, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.linux.LinuxPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin) not found List(play.ebean.sbt.PlayEbean, play.sbt.PlayJava, com.typesafe.play.sbt.enhancer.PlayEnhancer, play.sbt.Play, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, play.twirl.sbt.SbtTwirl, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.routes.RoutesCompiler, play.sbt.PlayLogback, com.typesafe.sbt.jse.SbtJsTask, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, play.sbt.forkrun.PlayForkRun, com.typesafe.sbt.packager.debian.DebianPlugin, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, com.typesafe.play.sbt.enhancer.PlayEnhancer, play.twirl.sbt.SbtTwirl, play.sbt.routes.RoutesCompiler, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.debian.DebianPlugin) not found List(play.ebean.sbt.PlayEbean, play.sbt.PlayJava, play.sbt.Play, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.PlayLogback, com.typesafe.sbt.jse.SbtJsTask, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.coffeescript.SbtCoffeeScript, play.sbt.forkrun.PlayForkRun, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, com.typesafe.play.sbt.enhancer.PlayEnhancer, play.twirl.sbt.SbtTwirl, play.sbt.routes.RoutesCompiler, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.debian.DebianPlugin, play.ebean.sbt.PlayEbean, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, com.typesafe.sbt.jse.SbtJsEngine, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest) not found List(play.sbt.PlayJava, play.sbt.Play, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.PlayLogback, com.typesafe.sbt.jse.SbtJsTask, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, play.sbt.forkrun.PlayForkRun)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, com.typesafe.play.sbt.enhancer.PlayEnhancer, play.twirl.sbt.SbtTwirl, play.sbt.routes.RoutesCompiler, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.debian.DebianPlugin, play.ebean.sbt.PlayEbean, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, com.typesafe.sbt.jse.SbtJsEngine, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, com.typesafe.sbt.jse.SbtJsTask) not found List(play.sbt.PlayJava, play.sbt.Play, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.PlayLogback, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, play.sbt.forkrun.PlayForkRun)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, com.typesafe.play.sbt.enhancer.PlayEnhancer, play.twirl.sbt.SbtTwirl, play.sbt.routes.RoutesCompiler, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.debian.DebianPlugin, play.ebean.sbt.PlayEbean, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, com.typesafe.sbt.jse.SbtJsEngine, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, com.typesafe.sbt.jse.SbtJsTask, play.sbt.Play, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript) not found List(play.sbt.PlayJava, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.PlayLogback, play.sbt.forkrun.PlayForkRun)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, com.typesafe.play.sbt.enhancer.PlayEnhancer, play.twirl.sbt.SbtTwirl, play.sbt.routes.RoutesCompiler, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.debian.DebianPlugin, play.ebean.sbt.PlayEbean, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, com.typesafe.sbt.jse.SbtJsEngine, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, com.typesafe.sbt.jse.SbtJsTask, play.sbt.Play, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, play.sbt.PlayJava, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.PlayLogback, play.sbt.forkrun.PlayForkRun) not found List()
+  :: sorted deduced result: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, com.typesafe.play.sbt.enhancer.PlayEnhancer, play.twirl.sbt.SbtTwirl, play.sbt.routes.RoutesCompiler, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.debian.DebianPlugin, play.ebean.sbt.PlayEbean, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, com.typesafe.sbt.jse.SbtJsEngine, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, com.typesafe.sbt.jse.SbtJsTask, play.sbt.Play, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, play.sbt.PlayJava, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.PlayLogback, play.sbt.forkrun.PlayForkRun)
+[Loading] Done in C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java, returning: (root)
+Set current project to play-java (in build file:/C:/Users/Tina/Documents/TechnoWeb2/GAPP/play-java/)
+Reapplying settings...
+Set current project to play-java (in build file:/C:/Users/Tina/Documents/TechnoWeb2/GAPP/play-java/)
+> iflast shell
+> server-send-ready-for-request
+> server-handle-next-server-request
+> {file:/C:/Users/Tina/Documents/TechnoWeb2/GAPP/play-java/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@573764ab, check cycles: false
+Total time: 0 s, completed 15 juin 2016 16:26:26
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Tina/Documents/TechnoWeb2/GAPP/play-java/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@761d5b71, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 15 s, completed 15 juin 2016 16:26:41
+> server-post-command-cleanup
+> server-handle-next-server-request
+Received execution starting without a waiting first ExecutionStarting(3)
+Received execution starting without a waiting first ExecutionStarting(3)
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Tina/Documents/TechnoWeb2/GAPP/play-java/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@dff38a4, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 1 s, completed 15 juin 2016 16:26:43
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@390be280, check cycles: false
+Total time: 0 s, completed 15 juin 2016 16:26:43
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Tina/Documents/TechnoWeb2/GAPP/play-java/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@422a46ab, check cycles: false
+Total time: 1 s, completed 15 juin 2016 16:26:50
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@5eef7d08, check cycles: false
+Total time: 0 s, completed 15 juin 2016 16:26:53
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Tina/Documents/TechnoWeb2/GAPP/play-java/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@6d766ab7, check cycles: false
+SLF4J: The following set of substitute loggers may have been accessed
+SLF4J: during the initialization phase. Logging calls during this
+SLF4J: phase were not honored. However, subsequent logging calls to these
+SLF4J: loggers will work as normally expected.
+SLF4J: See also http://www.slf4j.org/codes.html#substituteLogger
+SLF4J: org.webjars.WebJarExtractor
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\conf\application.conf,C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\target\scala-2.11\classes\application.conf)
+	(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\conf\evolutions,C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\target\scala-2.11\classes\evolutions)
+	(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\conf\logback.xml,C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\target\scala-2.11\classes\logback.xml)
+	(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\conf\routes,C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\target\scala-2.11\classes\routes)
+	(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\conf\evolutions\default,C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\target\scala-2.11\classes\evolutions\default)
+	(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\conf\evolutions\default\1.sql,C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\target\scala-2.11\classes\evolutions\default\1.sql)
+Total time: 6 s, completed 15 juin 2016 16:27:50
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@3f33a251, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java)
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\target\scala-2.11\classes...
+Java compilation took 2.214763865 s
+Java analysis took 0.338442325 s
+Java compile + analysis took 2.859714171 s
+Invalidating C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java...
+Invalidating (transitively) by inheritance from C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java...
+Initial set of included nodes: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java)
+The C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java source file has the following regular definitions changed:
+	.
+All member reference dependencies will be considered within this context.
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 12 s, completed 15 juin 2016 19:15:36
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 1
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@1354abd6, check cycles: false
+Total time: 1 s, completed 15 juin 2016 19:15:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@26ed90b8, check cycles: false
+Total time: 0 s, completed 15 juin 2016 19:15:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Tina/Documents/TechnoWeb2/GAPP/play-java/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@7f85357a, check cycles: false
+Total time: 1 s, completed 15 juin 2016 19:15:48
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@39173e73, check cycles: false
+Total time: 0 s, completed 15 juin 2016 19:15:51
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@16ec9a7, check cycles: false
+
+Initial source changes: 
+	removed:Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java)
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java)
+
+Invalidating C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java...
+Invalidating (transitively) by inheritance from C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java...
+Initial set of included nodes: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java)
+Invalidated by transitive inheritance dependency: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java)
+The C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_comment_p.java source file has the following regular definitions changed:
+	.
+All member reference dependencies will be considered within this context.
+New invalidations:
+	Set()
+Initial set of included nodes: Set()
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+Total time: 2 s, completed 15 juin 2016 19:29:04
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@4339ce1e, check cycles: false
+
+Canceling execution...
+Task java.util.concurrent.ExecutorCompletionService$QueueingFuture@7f05a24f rejected from java.util.concurrent.ThreadPoolExecutor@c207879[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ExecutorCompletionService$QueueingFuture@7f05a24f rejected from java.util.concurrent.ThreadPoolExecutor@c207879[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+Use 'last' for the full log.
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> jobStop 2
+Evaluating tasks: *:jobStop
+Running task... Cancel: sbt.server.ServerTaskCancellation@7e12f2fc, check cycles: false
+Total time: 0 s, completed 15 juin 2016 19:29:04
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@2bb29f47, check cycles: false
+Total time: 1 s, completed 15 juin 2016 19:29:05
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/Tina/Documents/TechnoWeb2/GAPP/play-java/}root/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@305d89f0, check cycles: false
+Total time: 1 s, completed 15 juin 2016 19:29:09
+> server-post-command-cleanup
+> server-handle-next-server-request
+> root/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@4608ae04, check cycles: false
+Total time: 0 s, completed 15 juin 2016 19:29:12
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@7c508d33, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java)
+
+Read from stdout: Compiling 1 Java source to C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\target\scala-2.11\classes...
+Compiling 1 Java source to C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\target\scala-2.11\classes...
+Read from stdout: C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java:34:  error: non-static variable CL_comment cannot be referenced from a static context
+C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java:34:  error: non-static variable CL_comment cannot be referenced from a static context
+Read from stdout: T_competence_l t_competence_l = new T_competence_l(CL_id_student, CL_id_competence, CL_bool_competence, CL_id_tutor, CL_level, CL_comment);
+Read from stdout: ^
+        T_competence_l t_competence_l = new T_competence_l(CL_id_student, CL_id_competence, CL_bool_competence, CL_id_tutor, CL_level, CL_comment);
+                                                                                                                                       ^
+Read from stdout: Note: C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java uses or overrides a deprecated API.
+Note: C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java uses or overrides a deprecated API.
+Read from stdout: Note: Recompile with -Xlint:deprecation for details.
+Note: Recompile with -Xlint:deprecation for details.
+Read from stdout: Note: C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java uses unchecked or unsafe operations.
+Note: C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java uses unchecked or unsafe operations.
+Read from stdout: Note: Recompile with -Xlint:unchecked for details.
+Note: Recompile with -Xlint:unchecked for details.
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 4 s, completed 15 juin 2016 19:32:05
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@398495f8, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java, C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\controllers\SkillsMatrixController.java)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java, C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\controllers\SkillsMatrixController.java)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java, C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\controllers\SkillsMatrixController.java)
+
+Read from stdout: Compiling 2 Java sources to C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\target\scala-2.11\classes...
+Compiling 2 Java sources to C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\target\scala-2.11\classes...
+Read from stdout: C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\controllers\SkillsMatrixController.java:104:  error: Authenticated is not a repeatable annotation type
+C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\controllers\SkillsMatrixController.java:104:  error: Authenticated is not a repeatable annotation type
+Read from stdout: @Security.Authenticated(Secured.class)
+Read from stdout: ^
+    @Security.Authenticated(Secured.class)
+    ^
+Read from stdout: C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\controllers\SkillsMatrixController.java:51:  error: no suitable method found for update(Integer,Integer,Integer)
+C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\controllers\SkillsMatrixController.java:51:  error: no suitable method found for update(Integer,Integer,Integer)
+Read from stdout: if (!T_competence_l.update(id, skill, level)) {
+Read from stdout: ^
+                if (!T_competence_l.update(id, skill, level)) {
+                                   ^
+Read from stdout: method Model.update() is not applicable
+Read from stdout: (actual and formal argument lists differ in length)
+Read from stdout: method Model.update(String) is not applicable
+Read from stdout: (actual and formal argument lists differ in length)
+Read from stdout: C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java:34:  error: non-static variable CL_comment cannot be referenced from a static context
+method Model.update() is not applicable
+      (actual and formal argument lists differ in length)
+    method Model.update(String) is not applicable
+      (actual and formal argument lists differ in length)
+C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java:34:  error: non-static variable CL_comment cannot be referenced from a static context
+Read from stdout: T_competence_l t_competence_l = new T_competence_l(CL_id_student, CL_id_competence, CL_bool_competence, CL_id_tutor, CL_level, CL_comment);
+Read from stdout: ^
+        T_competence_l t_competence_l = new T_competence_l(CL_id_student, CL_id_competence, CL_bool_competence, CL_id_tutor, CL_level, CL_comment);
+                                                                                                                                       ^
+Read from stdout: Note: Some input files use or override a deprecated API.
+Note: Some input files use or override a deprecated API.
+Read from stdout: Note: Recompile with -Xlint:deprecation for details.
+Note: Recompile with -Xlint:deprecation for details.
+Read from stdout: Note: C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java uses unchecked or unsafe operations.
+Note: C:\Users\Tina\Documents\TechnoWeb2\GAPP\play-java\app\models\T_competence_l.java uses unchecked or unsafe operations.
+Read from stdout: Note: Recompile with -Xlint:unchecked for details.
+Note: Recompile with -Xlint:unchecked for details.
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 3 s, completed 15 juin 2016 19:54:20
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request

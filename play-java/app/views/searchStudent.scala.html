@@ -1,0 +1,60 @@
+@(title: String, status: Integer, name: String, form: Form[SearchController.SearchName], searchList: List[String])
+
+@main(title, status, name) {
+    <head>
+        <title>Recherche</title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+ 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    </head>
+    
+   
+
+    <body>
+
+    @helper.form(routes.SearchController.redirectPage2) {
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-offset-4 col-lg-4 col-lg-offset-4">
+                <div class="form-group input-group">
+                    <input type="text" name="student" id="student" class="form-control" value="@form("student").value">
+                    <span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+	}
+	
+	@if(form.hasGlobalErrors) {
+            <p class="error">
+                @form.globalError.message
+            </p>
+    }
+        
+    @if(flash.contains("success")) {  // HERE
+        <p class="success">
+            @flash.get("success")
+        </p>
+    }
+			
+	<script>
+	
+	var availableStudents= [];
+	
+	@searchList.map { searchList =>
+        availableStudents.push("@searchList");
+    }
+			
+	$(function() {
+    	$("#student").autocomplete({
+	         source: availableStudents
+	    });
+    });
+    </script>
+		
+}
+
+
+
+
+                
