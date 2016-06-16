@@ -1,0 +1,27 @@
+@(form: Form[NoteController.AddNotes])
+
+
+@helper.form(routes.NoteController.create) {
+	<h1>Ajouter une compétence</h1>
+	    <p>
+		    <label>Nom : </label><input type="text" name="name">
+	    </p>
+		<p>
+		    <label>Valeur : </label><input type="number" min="1" max="20" name="value"/>
+		</p>
+		
+		<input type="submit" value="Sauvegarder">
+
+    }
+    
+    @if(form.hasGlobalErrors) {
+            <p class="error">
+                @form.globalError.message
+            </p>
+    }
+        
+    @if(flash.contains("success")) {  // HERE
+        <p class="success">
+            @flash.get("success")
+        </p>
+    }

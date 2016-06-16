@@ -1,0 +1,69 @@
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    display: block;
+}
+
+.nav ul {
+    padding-left: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.nav a {
+  color: #5a5a5a;
+}
+
+.nav li {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+  display: inline;
+}
+
+.jumbotron {
+  background-image:url('http://www.twoutils.com/articles/wp-content/uploads/2014/05/banniere-twitter-fleur-bleue.jpg');
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.jumbotron .container {
+  position: relative;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+  margin-top: 0;
+  text-shadow:  0 -1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.pull-right {
+    float: right!important;
+}
+
+.pull-left {
+    float: left!important;
+}

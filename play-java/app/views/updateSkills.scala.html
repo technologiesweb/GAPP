@@ -1,0 +1,39 @@
+@(title: String, status: Integer, name: String, form: Form[SkillsMatrixController.UpdateSkills], t_competence_p: T_competence_p)
+
+@main(title, status, name) {
+
+
+    @helper.form(routes.SkillsMatrixController.updateSkill(t_competence_p.CP_id)) {
+
+	
+	
+	    <p>
+		    <label>Nom : </label><input type="text" name="name" value="@t_competence_p.CP_name">
+	    </p>
+
+		<p>
+		    <textarea rows="4" cols="50" name="description">@t_competence_p.CP_description</textarea>
+		</p>
+		<input type="hidden" name="id" value=@t_competence_p.CP_id>
+		
+		<input type="submit" value="Sauvegarder">
+
+
+    }
+    
+    @if(form.hasGlobalErrors) {
+            <p class="error">
+                @form.globalError.message
+            </p>
+    }
+        
+    @if(flash.contains("success")) {  // HERE
+        <p class="success">
+            @flash.get("success")
+        </p>
+    }
+    
+    
+}
+
+

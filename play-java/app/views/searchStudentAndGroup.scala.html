@@ -1,0 +1,53 @@
+@(form: Form[SearchController.SearchNameOrGroup], searchList: List[String])
+
+<html>
+    <head>
+        <title>Recherche</title>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+ 		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    </head>
+    
+   
+
+    <body>
+
+    @helper.form(routes.SearchController.redirectPage) {
+            <h3>Rechercher un élève ou un groupe</h3>
+				<p><input type="text" name="studentOrGroup" id="studentOrGroup" value="@form("studentOrGroup").value"/></p>
+				<input type="submit" value="Rechercher">
+	}
+	
+	@if(form.hasGlobalErrors) {
+            <p class="error">
+                @form.globalError.message
+            </p>
+    }
+        
+    @if(flash.contains("success")) {  // HERE
+        <p class="success">
+            @flash.get("success")
+        </p>
+    }
+			
+	<script>
+	
+	var availableStudentsAndGroups = [];
+	
+	@searchList.map { searchList =>
+        availableStudentsAndGroups.push("@searchList");
+    }
+			
+	$(function() {
+    	$("#studentOrGroup").autocomplete({
+	         source: availableStudentsAndGroups
+	    });
+    });
+    </script>
+		
+
+</body>
+</html>
+
+
+
