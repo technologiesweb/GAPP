@@ -1,5 +1,0 @@
-package org.jasypt.digest;
-
-public class StringDigester {
-
-}
